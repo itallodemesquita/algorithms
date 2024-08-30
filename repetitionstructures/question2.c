@@ -1,4 +1,4 @@
-/* Exibe o somatório dos valores pares no intervalo 1 < x <= 500.
+/* Exibe o somatório dos valores pares no intervalo 1 < x <= 500. */
 
 #include <stdio.h>
 int main (){
