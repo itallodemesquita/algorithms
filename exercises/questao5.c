@@ -1,42 +1,51 @@
 // I. Leia dois valores
 // II. Leia qual operação se deseja utilizar
+// III. Mostre o valor da operação
+
 #include <stdio.h>
 
+#include <stdio.h>
 int main(void) {
-    float a, b, ab;
-    char operador;
     
-    printf("*****CALCULATOR*****\n");
-    printf("Digite o primeiro valor que você deseja operar: ");
+    float a, b, ab;
+    int sinal;
+    
+    printf("*****CALCULADORA*****\n\n");
+    printf("Digite o primeiro valor: ");
     scanf("%f", &a);
-    printf("Digite o segundo valor que você deseja operar: ");
+    printf("Digite o segundo valor: ");
     scanf("%f", &b);
     printf("\n");
     printf("Qual operação você deseja utilizar?\n");
-    scanf("%c", &operador);
-    printf("Digite \'p\' para \"a + b\"\n");
-    printf("Digite \'m\' para \"a - b\"\n");
-    printf("Digite \'v\' para \"a * b\"\n");
-    printf("Digite \'d\' para \"a / b\"\n");
+    printf("*Digite \'1\' para \"a + b\"*\n");
+    printf("*Digite \'2\' para \"a - b\"*\n");
+    printf("*Digite \'3\' para \"a * b\"*\n");
+    printf("*Digite \'4\' para \"a / b\"*\n");
+    scanf("%d", &sinal);
    
-    switch(operador){
-        case 'p':
+    switch(sinal){
+        case 1:
             ab = a + b;
             printf("O resultado da operação é igual a %.1f", ab);
             break;
-        case 'm':
+        case 2:
             ab = a - b;
             printf("O resultado da operação é igual a %.1f", ab);
             break;
-        case 'v':
+        case 3:
             ab = a * b;
             printf("O resultado da operação é igual a %.1f", ab);
             break;
-        case 'd':
+        case 4:
             ab = a / b;
-            printf("O resultado da operação é igual a %.1f", ab);
+            printf("O resultado da operação é igual a %.4f", ab);
             break;
         default:
+            printf("Opção inválida.");
+    }
+    
+    return 0;
+}
             printf("Opção inválida.");
     }
     
