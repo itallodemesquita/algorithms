@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void writeBoletim (char matnome[5][20], float matnota[5][3]) {
 
